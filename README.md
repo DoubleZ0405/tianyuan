@@ -8,12 +8,21 @@
 针对以上问题以及2022年波分传送带宽扩容需求暴增（3000+T开放光容量，4000+设备量，单集群网元超1000台）（数据支撑说话）的需求，天元项目启动
 wiki：https://iwiki.woa.com/pages/viewpage.action?pageId=1524205726
 
+## 项目介绍
+
+当前网管系统在长期运行阶段，暴露许多数据资源不一致问题（控制器内部以及设备侧数据），这些问题有大有小，严重的影响网络建设快速扩容带宽需求的业务下发成功率，
+以及对Controller管控设备产生影响，主要包括：
+![问题分类](https://github.com/DoubleZ0405/tianyuan/assets/41030134/2e341b18-7f64-4d9a-9f5c-b09ba68bb034)
+
+
 ## 架构设计
-基于公司trpc-go框架搭建服务
-<img width="" src="/uploads/FC1289F31D1E496B9F4DAC663E3B1672/image.png" alt="image.png" />
+基于Tencent的开源trpc-go框架搭建服务
+![架构探测图](https://github.com/DoubleZ0405/tianyuan/assets/41030134/800314e6-df43-4bbc-9fd9-62a124045846)
+
 
 ## rcc_server在线架构
-<img width="" src="/uploads/BD25C952BB9D4023BFC4D8215C456807/image.png" alt="image.png" />
+![image](https://github.com/DoubleZ0405/tianyuan/assets/41030134/2cdd1920-8ebe-48c5-b285-3b1641fe723e)
+
 
 ## 主要功能
 ### 技术点：
@@ -45,17 +54,9 @@ wiki：https://iwiki.woa.com/pages/viewpage.action?pageId=1524205726
 ## 如何使用
 
 
-
-
-
 ### 部署环境
 
-1、测试环境-Openlab
-   - namespace：toop36（城域）
-   - namespace：toop37（长传）
-
-2、生产环境-TKE-Stack
-   - all namespace 深圳 广州集群
+TKE集群
 
 ### 项目编译
 
@@ -75,11 +76,7 @@ curl --location --request POST 'http://【host】/trpc.tianyuan.rcc_server.Rcc/C
 --header 'Content-Type: application/json' \
 --data-raw '{
     "ne_id": [
-        "Site-1649753496364#Ne-1649756699857",
-        "Site-1649908587516#Ne-1652096864185",
-        "Site-1649908587516#Ne-1649920136143",
-        "Site-1649908599389#Ne-1649920094297",
-        "Site-1649908599389#Ne-1652096864188"
+        "Site-xxx#Ne-xxx"
     ]
 }'
 ```

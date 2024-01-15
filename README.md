@@ -5,15 +5,17 @@ Network resource consistency inspection and reconciliation system
 
 当前网管系统在长期运行阶段，暴露许多数据资源不一致问题（控制器内部以及设备侧数据），这些问题有大有小，严重的影响网络建设快速扩容带宽需求的业务下发成功率，
 以及对Controller管控设备产生影响，主要包括：
+![问题分类](https://github.com/DoubleZ0405/tianyuan/assets/41030134/2e341b18-7f64-4d9a-9f5c-b09ba68bb034)
 
-<img width="" src="/uploads/132A9AA819F346EFAB6057C5B2A5D4A7/image.png" alt="image.png" />
 
 ## 架构设计
 基于Tencent的开源trpc-go框架搭建服务
-<img width="" src="/uploads/FC1289F31D1E496B9F4DAC663E3B1672/image.png" alt="image.png" />
+![架构探测图](https://github.com/DoubleZ0405/tianyuan/assets/41030134/800314e6-df43-4bbc-9fd9-62a124045846)
+
 
 ## rcc_server在线架构
-<img width="" src="/uploads/BD25C952BB9D4023BFC4D8215C456807/image.png" alt="image.png" />
+![image](https://github.com/DoubleZ0405/tianyuan/assets/41030134/2cdd1920-8ebe-48c5-b285-3b1641fe723e)
+
 
 ## 主要功能
 ### 技术点：
